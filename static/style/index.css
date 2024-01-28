@@ -56,16 +56,15 @@ a {
     } 
 
     .site {
-        backdrop-filter: blur(6px);
         width: 150px;
-        height: 90px;
+        height: 80px;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 7px;
         padding-bottom: 7px;
         margin: 15px;
         font-size: 13px;
-        background-color: rgba(255, 255, 255, 30%);
+        background-color: rgba(255, 255, 255, 40%);
     }
 
     .in>.title {
