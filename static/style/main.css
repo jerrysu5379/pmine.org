@@ -20,8 +20,9 @@
 } 
 
 .box { 
+    backdrop-filter: blur(6px); 
     text-align: left;
-    background-color: rgba(200, 200, 200, 75%); 
+    background-color: rgba(200, 200, 200, 50%); 
     margin-left: 10%; 
     padding-left: 20px; 
     width: 80%; 
@@ -55,7 +56,11 @@ a:hover {
 
 .box ol { 
     padding-left: 20px; 
-}
+} 
+
+.box ul { 
+    padding-left: 20px; 
+} 
 
 .box hr { 
     margin-top: 1em;
@@ -65,7 +70,7 @@ a:hover {
 
 @media (max-width: 767px) {
     .box {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .box h1 {
@@ -73,7 +78,7 @@ a:hover {
     } 
 
     .box h2 {
-        font-size: 15px; 
+        font-size: 17px; 
     } 
 }  
 
