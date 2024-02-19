@@ -9600,14 +9600,15 @@
 
 function createDivs() {
     var navbar = document.createElement("div");
-    navbar.id = "navbar";
-    navbar.className = "navbar";
-    $(navbar).load('https://pmine.org/static/navbar.html'); 
+    navbar.id = "navbar-cont";
+    navbar.className = "navbar-cont"; 
+    $(navbar).load('/static/navbar.html nav'); 
     document.body.insertBefore(navbar, document.body.firstChild); 
     var footdiv = document.createElement("div");
-    footdiv.id = "footdiv";
-    footdiv.className = "footdiv";
-    $(footdiv).load('https://pmine.org/static/footdiv.html'); 
+    footdiv.id = "footdiv-cont";
+    footdiv.className = "footdiv-cont"; 
+    footdiv.style = "background-color: #eee; width: 100%;"
+    $(footdiv).load('/static/footdiv.html footer'); 
     document.body.appendChild(footdiv);
 }
 

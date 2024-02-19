@@ -4,128 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Project-MINE</title>
-    <meta name="keywords" content="Project-MINE">
-    <style> 
-        .footbox { 
-            width: 100%;
-            margin-top: 0px;
-            background-color: #aaa; 
-            padding-left: 2%; 
-            padding-right: 2% 
-        }
-
-        .footbox ul {
-            list-style-type: none;
-        } 
-
-        .footbox thead th {
-            text-align: left;
-            font-weight: bold;
-            line-height: 100%;
-        }
-
-        .footbox tbody td { 
-            vertical-align: top;
-            line-height: 200%;
-            text-align: left;
-        }
-
-        .footbox tbody td a:link {
-            color: #333;
-        }
-
-        .footbox tbody td a:visited {
-            color: #333;
-        }
-
-        .footbox tbody td a:hover {
-            color: #FF1493;
-        }
-
-        @media (min-width: 768px) { 
-            .footbox { 
-                padding-top: 20px; 
-            } 
-
-            .footbox thead th {
-                width: 250px;
-                font-size: 20px;
-                padding-bottom: 15px;
-            }
-
-            .footbox tbody td {
-                font-size: 15px; 
-                width: 250px;
-                padding-bottom: 15px;
-            } 
-
-            .footnote {
-                font-size: 15px;
-            } 
-        }
-
-        @media (max-width: 767px) { 
-            .footbox { 
-                padding-top: 10px; 
-            } 
-
-            .footbox thead th {
-                width: 150px;
-                font-size: 15px;
-                padding-bottom: 10px;
-            }
-
-            .footbox tbody td {
-                font-size: 11px;
-                width: 150px;
-                padding-bottom: 10px;
-            }
-
-            .footnote { 
-                font-size: 10px;
-            }
-        }
-    </style>
+    <title>Tool Box</title>
+    <meta name="keywords" content="FDS Toolbox Navbar">
+    <link href="https://cdn.pmine.org/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body> 
-    <!--<div class="footbox" style="background-color: black; color: orange; font-size: 24px; text-align: center; width:100%; padding: 10px; border: 10px dashed orange;">
-        <p style="margin-top: 30px; margin-bottom: 30px;">网站将于 2024 年 2 月底进行服务器系统升级，届时可能会出现访问不稳定等问题 </p>
-      </div>-->  
-    <div class="footbox"> 
-        <table>
-            <thead>
-                <th>本站 </th>
-                <th>FDS </th>
-                <th>友情链接 </th>
-            </thead>
-            <tr>
-                <td> 
-                    <a href="https://pmine.org">工具箱 </a> <br> 
-                    <a href="https://pmine.org/development/changelog.html">更新日志 </a> <br> 
-                    <a href="https://pmine.org/development/developers.html">参与制作 </a> 
-                <td> 
-                    <a href="https://fds.moe">FDS </a> <br> 
-                    <a href="https://www.mcbbs.net/?4982639">MCBBS 账号 </a> <br>
-                    <a href="https://klpbbs.com/space-uid-690347.html">苦力怕论坛账号 </a>
-                </td>
-                <td> 
-                    <a href="https://fds.moe">FDS </a> <br> 
-                    <a href="https://pmine.org">工具箱 </a> <br> 
-                    <a href="https://klpbbs.com">苦力怕论坛 </a> <br> 
-                    <a href="https://butian103.github.io/FreeDayO-NetWork/">FreeDayO </a> 
-                </td>
-            </tr>
-        </table> 
+<body>
+    <div class="container"> 
+        <footer class="py-5" style="width: 100%; padding-left: 2%; padding-right: 2% "> 
+            <h3 style="color: lightcoral">网站 v2 模板正在测试中... 可能于部分旧 v1 模板冲突或者出现各种意想不到的现象 </h3> 
+            <br> 
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>本站</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://pmine.org" class="nav-link p-0 text-body-secondary">首页</a></li>
+                        <li class="nav-item mb-2"><a href="https://pmine.org/development/changelog.html" class="nav-link p-0 text-body-secondary">更新日志</a></li>
+                        <li class="nav-item mb-2"><a href="https://pmine.org/development/developers.html" class="nav-link p-0 text-body-secondary">开发成员</a></li>
+                    </ul>
+                </div>
 
-        <br>
-        <div class="footnote"> 
-            <p>声明：本站与Mojang以及微软公司没有从属关系，FDS 是独立的游戏制作团体 </p> 
-            <p>Copyright 2017-2024 FDS All rights reserved </p>
-        </div>
-        <br>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>FDS</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://fds.moe/" class="nav-link p-0 text-body-secondary">FDS</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.mcbbs.net/?4982639" class="nav-link p-0 text-body-secondary">MCBBS（已关闭）</a></li>
+                        <li class="nav-item mb-2"><a href="https://klpbbs.com/space-uid-690347.html" class="nav-link p-0 text-body-secondary">KLPBBS 账号</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://fds.moe" class="nav-link p-0 text-body-secondary">FDS</a></li>
+                        <li class="nav-item mb-2"><a href="https://pmine.org" class="nav-link p-0 text-body-secondary">Tool box</a></li>
+                        <li class="nav-item mb-2"><a href="https://klpbbs.com" class="nav-link p-0 text-body-secondary">KLPBBS</a></li>
+                        <li class="nav-item mb-2"><a href="https://butian103.github.io/FreeDayO-NetWork/" class="nav-link p-0 text-body-secondary">FreeDayO</a></li>
+                    </ul>
+                </div>
+
+                <!--<div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>--> 
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2024 <a href="https://fds.moe" class="text-body-secondary">FDS</a>, All rights reserved.</p> 
+                <!--<ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter" />
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram" />
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook" />
+                            </svg></a></li>
+                </ul>--> 
+            </div>
+        </footer>
     </div>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
-</html> 
+</html>
