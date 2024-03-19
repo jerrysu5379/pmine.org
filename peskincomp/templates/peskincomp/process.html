@@ -1,0 +1,130 @@
+{%extends "peskincomp/template.html"%}
+
+{%block body%}
+<script>
+
+    var url = "{{url}}"
+    console.log(url)
+
+    document.addEventListener("DOMContentLoaded", load);
+
+    function load() {
+        fetch(`${url}/v3/app/{{rid}}`)
+            .then(response => response.json())
+            .then(data => {
+                data.skins.forEach(render);
+            });
+    }
+
+    document.addEventListener("click", function (event) {
+        if (event.target.matches('.skins')) {
+            inner(event.target);
+        }
+    });
+
+    function render(cont) {
+        const title = document.createElement("div");
+        title.classList.add("nav-item");
+        title.innerHTML = `<a data-id="${cont.id}" class="btn btn-outline-secondary skins" style="width: 100%">${cont.name}</a>`;
+        document.querySelector('#skins').appendChild(title);
+    }
+
+    function inner(button) {
+        fetch(`${url}/v3/app/getprop/${button.dataset.id}`)
+            .then(response => response.json())
+            .then(data => {
+                const changenameurl = `${url}/v3/process/${button.dataset.id}/changename`;
+                const changemodelurl = `${url}/v3/process/${button.dataset.id}/changemodel`;
+                const deleteskin = `${url}/v3/process/${button.dataset.id}/deleteskin`;
+
+                const content = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${data.name}</h5>
+                        <p class="card-text"><label class="lang" key="model">模型</label>:${data.model}</p>
+                        <img src="${url}/v3/picture/${data.id}" class="card-img-top" alt="${data.name}">
+                        <form action="${changenameurl}" method="post" style="padding-top:30px">
+                            {% csrf_token %}
+                            <label class="lang" key="skin_name"></label> 
+                            <input type="text" name="name">
+                            <input type="submit">
+                        </form>
+                        <form action="${changemodelurl}" method="post">
+                            {% csrf_token %}
+                            <label class="lang" key="model"></label> 
+                            <select name="model" id="model">
+                                <option value="geometry.humanoid.custom"></option>
+                                <option value="geometry.humanoid.custom">Steve</option>
+                                <option value="geometry.humanoid.customSlim">Alex</option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="${deleteskin}" method="post">
+                            {% csrf_token %}
+                            <label key="delete_this_file" class="lang"></label> <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            `;
+
+                document.querySelector('#cont').innerHTML = content;
+                refreash();
+                form();
+            });
+    }
+
+    function form() {
+        var forms = document.querySelectorAll('form');
+
+        forms.forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                var formData = new FormData(form);
+                var csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                var headers = new Headers({
+                    'X-CSRFToken': csrfToken
+                });
+
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: headers,
+                    body: formData,
+                    credentials: 'include'
+                })
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        console.log(data); 
+                        location.reload(); 
+                    })
+                    .catch(function (error) {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    };
+
+</script>
+<div class="row">
+    <div class="col-md-4">
+        <!-- Skins list -->
+        <div id="skins" class="nav flex-column nav-pills" aria-orientation="vertical">
+            <!-- Skins will be appended here by the JavaScript -->
+        </div>
+        <!-- Link for compression -->
+        <a href="${url}/v3/getcompress/{{rid}}" class="btn btn-primary mt-3 lang" style="width: 100%"
+            key="download">Compress</a>
+        <!-- Additional link -->
+        <a href="add" class="btn btn-pink active mt-3 lang" style="width: 100%" key="add">Add</a>
+    </div>
+    <div class="col-md-8">
+        <!-- Content area -->
+        <div id="cont">
+            <!-- Content will be displayed here when a skin is clicked -->
+        </div>
+    </div>
+</div>
+
+{%endblock%}
