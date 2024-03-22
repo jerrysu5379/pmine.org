@@ -3,7 +3,7 @@ from op import language
 
 # Create your views here.
 
-BACK_URL = 'http://skin.pmine.org' 
+BACK_URL = 'https://skin.pmine.org' 
 
 def index(request): 
     return render(request, "peskincomp/index.html", { 
