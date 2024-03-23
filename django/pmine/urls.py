@@ -29,5 +29,6 @@ urlpatterns = [
     path('op/', include("op.urls")), 
 
     # Apps 
-    path('skincomp/', include("peskincomp.urls"))
+    path('skincomp/', include("peskincomp.urls")), 
+    path('bbcode/', include("bbcodetemp.urls")), 
 ]

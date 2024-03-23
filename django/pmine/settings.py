@@ -29,9 +29,10 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
     'index', 
     'op', 
+    'bbcodetemp', 
     'peskincomp', 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -123,3 +124,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Static file server 
+
+ESSENTIALS = 'https://staticfiles.pmine.org/' 
