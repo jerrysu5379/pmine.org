@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BBCode 生成器</title>
+    <title class="lang" key="bbcodetemp"></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> 
     <script src="form.js"></script> 
     <script src="index.js"></script>
@@ -22,36 +22,36 @@
             <div class="row">
                 <div class="col-12">
                     <div class="btn-group mt-3 mb-3">
-                        <a href="../" class="btn btn-pink">返回首页</a>
-                        <a href="temp.html" class="btn btn-pink">查看模板</a>
+                        <a href="../" class="btn btn-pink lang" key="return">返回首页</a>
+                        <a href="temp.html" class="btn btn-pink lang" key="viewtemplate"></a>
                     </div>
                 </div>
             </div>
             <div class="row" id="change">
                 <div class="col-6">
-                    <label for="color" class="form-label">标题颜色：</label>
+                    <label for="color" class="form-label lang" key="maincolour"></label>
                     <input type="color" id="color" class="form-control form-control-color" value="#00bfff">
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label for="table-size" class="form-label">外层大小：</label>
+                    <label for="table-size" class="form-label lang" key="size"></label>
                     <input type="text" id="table-size" name="table-size" data-type="table-size" class="form-control"
-                        placeholder="请输入小于 100 的正整数" value="98">
+                        placeholder="" value="98">
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button id="insert_image" class="btn btn-pink mt-3 mb-3">插入图片</button>
+                    <button id="insert_image" class="btn btn-pink mt-3 mb-3 lang" key="insertimage"></button>
                 </div>
             </div>
         </div>
         <div id="output" class="container box">
         </div>
         <div id="function" class="container box">
-            <button data-type="add" data-func="para" class="btn btn-pink mt-3 mb-3">添加段落 </button>
-            <button data-type="convert" data-func="copy" class="btn btn-pink mt-3 mb-3">编译并且拷贝</button>
-            <button data-type="convert" data-func="convert" class="btn btn-pink mt-3 mb-3">编译并且展示</button>
+            <button data-type="add" data-func="para" class="btn btn-pink mt-3 mb-3 lang" key="insertpara"> </button>
+            <button data-type="convert" data-func="copy" class="btn btn-pink mt-3 mb-3 lang" key="compileandcopy"></button>
+            <button data-type="convert" data-func="convert" class="btn btn-pink mt-3 mb-3 lang" key="compile"></button>
         </div>
         <div id="things">
 

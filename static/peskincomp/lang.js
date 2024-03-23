@@ -9653,6 +9653,7 @@ document.addEventListener("DOMContentLoaded", (refreash()))
 function refreash() {
     $(".lang").each(function (index, element) {
         $(this).text(arrLang[lang][$(this).attr("key")]); 
+        $(this).value(arrLang[lang][$(this).attr("key")]);
     });
 
     // get/set the selected language 
@@ -9669,6 +9670,7 @@ function refreash() {
 
             $(".lang").each(function (index, element) {
                 $(this).text(arrLang[lang][$(this).attr("key")]);
+                $(this).value(arrLang[lang][$(this).attr("key")]);
             });
         })
     })

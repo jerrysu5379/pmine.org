@@ -139,5 +139,5 @@ ${cont.text}
         }
     })
     navigator.clipboard.writeText(out);
-    alert("已经拷贝。如果拷贝失败请尝试编译并展示后手动拷贝")
+    alert("Copied")
 } 
