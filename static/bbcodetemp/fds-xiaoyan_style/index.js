@@ -11,6 +11,7 @@ function load() {
 
 document.addEventListener("click", function (event) {
     refector(event.target);
+    refreash();
 });
 
 function refector(button) {
@@ -65,6 +66,7 @@ ${element.querySelector("#honmo").value}
     out += `[/td][/tr]
 [/table]
 [/align]`
+    out += `Formatted by [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url]`
     document.querySelector("#output").innerHTML = out.replace(/(\r?\n)/g, "<br>");
 }
 
@@ -92,6 +94,7 @@ ${element.querySelector("#honmo").value}
     out += `[/td][/tr]
 [/table]
 [/align]`
+    out += `Formatted by [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url]`
     navigator.clipboard.writeText(out);
     alert("Copied")
 }

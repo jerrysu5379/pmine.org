@@ -1,19 +1,10 @@
-paratem, subparatem, honmo
-
 inner = [] 
 
 out = ""
 
-document.addEventListener("DOMContentLoaded", load)
-
-function load() {
-    paratem = getparatem()
-    subparatem = getsubparatem()
-    honmo = gethonmo()
-}
-
 document.addEventListener("click", function (event) {
-    refector(event.target);
+    refector(event.target); 
+    refreash(); 
 });
 
 function refector(button) {
@@ -94,7 +85,8 @@ function convert() {
             ${cont.text} 
             [/table] [/align]\n`
         }
-    })
+    }) 
+    out += `[align=center]Formatted by [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url][/align]` 
     document.querySelector("#output").innerHTML = out.replace(/(\r?\n)/g, "<br>");
 }
 
@@ -137,7 +129,8 @@ ${cont.text}
 ${cont.text} 
 [/table] [/align]\n`
         }
-    })
+    }) 
+    out += `[align=center]Formatted by [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url][/align]` 
     navigator.clipboard.writeText(out);
     alert("Copied")
 } 

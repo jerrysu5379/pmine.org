@@ -9,11 +9,12 @@ function load() {
     alloc();
 }
 
-document.addEventListener("click", function (event) {
-    refector(event.target);
+document.addEventListener("click", function (event) { 
+    refector(event.target); 
+    refreash(); 
 });
 
-function refector(button) {
+function refector(button) { 
     console.log(button.dataset.type);
     if (button.dataset.type === "add") {
         add(button.dataset.func, button);
@@ -70,7 +71,7 @@ function convert() {
     out += `[align=center][b][font=Times New Roman][size=5]——END——[/size][/font][/b][/align][/td][/tr]
             [/table][/align][/td][/tr]
             [/table][table=98%,Black]
-            [tr][td][align=right][size=3][font=Times New Roman][color=#ffffff][b]Template From:Cinder [/b][/color][/font][/size][/align][align=right][font=Times New Roman][size=3][color=#ffffff][b][/b][/color][/size][/font][/align][/td][/tr]
+            [tr][td][align=right][size=3][font=Times New Roman][color=#ffffff][b]Template From:Cinder, From [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url] [/b][/color][/font][/size][/align][align=right][font=Times New Roman][size=3][color=#ffffff][b][/b][/color][/size][/font][/align][/td][/tr]
             [/table]`
     document.querySelector("#output").innerHTML = out.replace(/(\r?\n)/g, "<br>");
 }

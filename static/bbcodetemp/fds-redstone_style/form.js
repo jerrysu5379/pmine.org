@@ -24,7 +24,7 @@ paratem.innerHTML = `<div class="p table table-borderless" style="margin-top: 5%
             <td><textarea id="honmo" name="honmo" data-type="honmo" placeholder="" rows="10" cols="50" style="font-size: 1rem; width: 100%;"></textarea></td>
           </tr>
           <tr id="end">
-            <td colspan="2" align="right"><button data-type="add" data-func="small" class="btn btn-pink mt-3 mb-3 lang" key="insertsubpara"></button><button data-type="remove" data-func="remove" class="btn btn-pink mt-3 mb-3 lang" key="deletepara"></button></td>
+            <td colspan="2" align="right"><button data-type="add" data-func="small" class="btn btn-pink mt-3 mb-3 active lang" key="insertsubpara"></button><button data-type="remove" data-func="remove" class="btn btn-pink mt-3 mb-3 active lang" key="deletepara"></button></td>
           </tr>
         </table>
       </div> `
@@ -44,7 +44,7 @@ subparatem.innerHTML = `<div class="p table table-borderless" style="margin-top:
             <td><textarea id="honmo" name="honmo" data-type="honmo" placeholder="" rows="10" cols="50" style="font-size: 1rem; width: 100%;"></textarea></td>
           </tr>
           <tr id="end">
-            <td colspan="2" align="right"><button data-type="add" data-func="small" class="btn btn-pink mt-3 mb-3" class="lang" key="insertsubpara"></button><button data-type="remove" data-func="remove" class="btn btn-pink mt-3 mb-3 lang" key="deletepara">DELETE</button></td>
+            <td colspan="2" align="right"><button data-type="add" data-func="small" class="btn btn-pink mt-3 mb-3 active lang" key="insertsubpara"></button><button data-type="remove" data-func="remove" class="btn btn-pink mt-3 mb-3 active lang" key="deletepara">DELETE</button></td>
           </tr>
         </table>
       </div> `

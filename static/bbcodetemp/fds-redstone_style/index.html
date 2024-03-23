@@ -8,10 +8,11 @@
     <script src="index.js"></script>
     <script src="../dynamictext.js"></script>
     <script src="../insertimage.js"></script>
+    <script src="../lang.js"></script>
     <link href="https://cdn.pmine.org/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.pmine.org/bootstrap-5.3.2/js/bootstrap.bundle.min.js"> </script>
-    <link href="https://pmine.org/static/style/pmine-bs.css" rel="stylesheet">
-    <title class="lang" key="bbcodetemp"></title>
+    <link href="https://cdn.pmine.org/fdsprivate/pmine-bs.css" rel="stylesheet"> 
+    <title class="lang" key="bbcodetemp"></title> 
 </head>
 
 <body>
@@ -40,15 +41,15 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button id="insert_image" class="btn btn-pink mt-3 mb-3 lang" key="insertimage"></button>
+                    <button id="insert_image" class="btn btn-pink mt-3 mb-3 active lang" key="insertimage"></button>
                 </div>
             </div>
         </div>
         <div id="function" class="container box">
-            <button data-type="add" data-func="para" class="btn btn-pink mt-3 mb-3 lang" key="insertpara">添加段落 </button>
-            <button data-type="add" data-func="sub" class="btn btn-pink mt-3 mb-3 lang" key="insertsupara">添加子段落 </button>
-            <button data-type="convert" data-func="copy" class="btn btn-pink mt-3 mb-3 lang" key="compileandcopy">编译并且拷贝</button>
-            <button data-type="convert" data-func="convert" class="btn btn-pink mt-3 mb-3">编译并且展示</button>
+            <button data-type="add" data-func="para" class="btn btn-pink mt-3 mb-3 active lang" key="insertpara"> </button>
+            <button data-type="add" data-func="sub" class="btn btn-pink mt-3 mb-3 active lang" key="insertsubpara"> </button>
+            <button data-type="convert" data-func="copy" class="btn btn-pink mt-3 mb-3 active lang" key="compileandcopy"></button>
+            <button data-type="convert" data-func="convert" class="btn btn-pink mt-3 mb-3 active lang" key="compile"></button>
         </div>
 
         <div id="output" class="container box"></div>
@@ -89,7 +90,7 @@
     </div>
 
     <script type="text/javascript" src="https://pmine.org/static/libs/load.js"></script>
-
+    <script>refreash()</script> 
 </body>
 
 </html>
