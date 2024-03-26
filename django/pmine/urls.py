@@ -31,4 +31,5 @@ urlpatterns = [
     # Apps 
     path('skincomp/', include("peskincomp.urls")), 
     path('bbcode/', include("bbcodetemp.urls")), 
+    path('uuid/', include("uuidgen.urls")), 
 ]

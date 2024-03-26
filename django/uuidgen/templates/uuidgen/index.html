@@ -1,0 +1,55 @@
+{%extends "uuidgen/template.html"%}
+
+{%block body%}
+
+<h1 class="lang" key="uuidgen"></h1>
+<hr>
+<div class="d-grid gap-2">
+    <button type="button" class="btn btn-pink lang" onclick="generateUUID('v4', 1);" key="generate"></button>
+    <button type="button" class="btn btn-pink lang" onclick="generateUUID('v4', 4);" key="generate4"></button>
+</div>
+<br>
+<div class="output">
+    <h2>Output</h2>
+    <br>
+    <div class="uuids" id="uuids">
+        <!-- UUIDs will be displayed here -->
+    </div>
+    <br>
+    <div class="d-grid gap-2">
+        <button class="copy btn btn-pink" id="copy" onclick="copyUUIDs();">Copy UUIDs</button>
+    </div>
+</div>
+<script>
+    const backendURL = "https://api.pmine.org/uuidv4/";
+
+    function generateUUID(version, count) {
+        document.getElementById("uuids").innerHTML = "";
+        let xhr = new XMLHttpRequest();
+        let url = count === 1 ? backendURL : backendURL + count;
+        xhr.open("GET", url);
+        xhr.responseType = "json";
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                let uuids = count === 1 ? [xhr.response.uuid] : xhr.response.uuid;
+                uuids.forEach(function (uuid) {
+                    let p = document.createElement("p");
+                    p.textContent = uuid;
+                    document.getElementById("uuids").appendChild(p);
+                });
+            }
+        };
+        xhr.send();
+    }
+
+    function copyUUIDs() {
+        let uuidsText = document.getElementById("uuids").innerText;
+        navigator.clipboard.writeText(uuidsText).then(function () {
+            console.log('UUIDs copied to clipboard');
+        }, function (err) {
+            console.error('Could not copy UUIDs: ', err);
+        });
+    }
+</script>
+
+{%endblock%}

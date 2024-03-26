@@ -9625,7 +9625,7 @@ var arrLang = {
         "delete_this_file": "删除皮肤"
     },
     "ja": {
-        "skin_converter": "Minecraft Bedrock Edition skin compresser",
+        "skin_converter": "Minecraft skin pack creator",
         "add": "Add skin",
         "description": "Please upload your skin file overthere to compress them into a .mcpack file. You can still upload it in the process",
         "upload": "Upload",

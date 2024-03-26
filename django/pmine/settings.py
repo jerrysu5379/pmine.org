@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'op', 
     'bbcodetemp', 
     'peskincomp', 
+    'uuidgen', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
