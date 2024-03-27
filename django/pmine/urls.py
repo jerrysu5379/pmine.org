@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns 
 from django.urls import path, include 
 
 urlpatterns = [
@@ -32,4 +33,23 @@ urlpatterns = [
     path('skincomp/', include("peskincomp.urls")), 
     path('bbcode/', include("bbcodetemp.urls")), 
     path('uuid/', include("uuidgen.urls")), 
-]
+    path('maths/', include("maths.urls")), 
+] 
+
+localized_patterns = [
+    # Index pages 
+    path('', include("index.urls")), 
+    path('index/', include("index.urls")), 
+
+    # Static operations 
+    path('static/', include("op.urls")), 
+    path('op/', include("op.urls")), 
+
+    # Apps 
+    path('skincomp/', include("peskincomp.urls")), 
+    path('bbcode/', include("bbcodetemp.urls")), 
+    path('uuid/', include("uuidgen.urls")), 
+    path('maths/', include("maths.urls")), 
+] 
+
+urlpatterns += i18n_patterns(*localized_patterns) 

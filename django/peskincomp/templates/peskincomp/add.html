@@ -3,15 +3,15 @@
 {%block body%}
 
 <div class="box">
-    <h1 class="lang" key="add"> </h1> 
+    <h1>{{trans.add}} </h1> 
     <hr> 
     <form method="POST" action="{{url}}/v3/" enctype="multipart/form-data" class="my-4">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="Upload" class="form-label lang" key="add_desc"></label>
+            <label for="Upload" class="form-label">{{trans.add_desc}}</label>
             <input class="form-control" type="file" id="Upload" name="Upload" multiple>
         </div>
-        <button type="submit" class="btn btn-pink active lang" key="upload"></button>
+        <button type="submit" class="btn btn-pink active">{{trans.upload}}</button>
     </form>
 </div>
 <script>

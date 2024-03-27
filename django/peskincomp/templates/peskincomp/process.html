@@ -41,17 +41,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${data.name}</h5>
-                        <p class="card-text"><label class="lang" key="model">模型</label>:${data.model}</p>
+                        <p class="card-text"><label>{{trans.model}}</label>:${data.model}</p>
                         <img src="${url}/v3/picture/${data.id}" class="card-img-top" alt="${data.name}">
                         <form action="${changenameurl}" method="post" style="padding-top:30px">
                             {% csrf_token %}
-                            <label class="lang" key="skin_name"></label> 
+                            <label>{{trans.skin_name}}</label> 
                             <input type="text" name="name">
                             <input type="submit">
                         </form>
                         <form action="${changemodelurl}" method="post">
                             {% csrf_token %}
-                            <label class="lang" key="model"></label> 
+                            <label>{{trans.model}}</label> 
                             <select name="model" id="model">
                                 <option value="geometry.humanoid.custom"></option>
                                 <option value="geometry.humanoid.custom">Steve</option>
@@ -61,7 +61,7 @@
                         </form>
                         <form action="${deleteskin}" method="post">
                             {% csrf_token %}
-                            <label key="delete_this_file" class="lang"></label> <input type="submit">
+                            <label>{{trans.delete_this_file}}</label> <input type="submit">
                         </form>
                     </div>
                 </div>
@@ -114,10 +114,9 @@
             <!-- Skins will be appended here by the JavaScript -->
         </div>
         <!-- Link for compression -->
-        <a href="{{url}}/v3/getcompress/{{rid}}" class="btn btn-primary mt-3 lang" style="width: 100%"
-            key="download">Compress</a>
+        <a href="{{url}}/v3/getcompress/{{rid}}" class="btn btn-primary mt-3" style="width: 100%">{{trans.download}}</a>
         <!-- Additional link -->
-        <a href="add" class="btn btn-pink active mt-3 lang" style="width: 100%" key="add">Add</a>
+        <a href="add" class="btn btn-pink active mt-3" style="width: 100%">{{trans.add}}</a>
     </div>
     <div class="col-md-8">
         <!-- Content area -->
