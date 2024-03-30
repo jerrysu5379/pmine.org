@@ -6,6 +6,7 @@ from django.conf import settings
 
 trantext ={
     "en": {
+        "description": "Minecraft skin pack creator, automatically generate a skinpack after you uploaded your skins",
         "skin_converter": "Minecraft skin pack creator",
         "add": "Add a skin",
         "description": "Please upload your skin file overthere to compress them into a .mcpack file. You can still upload it in the process",
@@ -19,6 +20,7 @@ trantext ={
         "delete_this_file": "Delete this skin", 
     },
     "zh-hans": {
+        "description": "Minecraft 基岩版皮肤自动皮肤包格式转换工具", 
         "skin_converter": "MCBE 皮肤自动打包",
         "add": "添加皮肤",
         "description": "请放入皮肤文件开始打包。在打包的过程中您可以添加更多的皮肤文件",
@@ -31,7 +33,8 @@ trantext ={
         "apply": "应用更改", 
         "delete_this_file": "删除皮肤"
     },
-    "ja": {
+    "ja": { 
+        "description": "Minecraft skin pack creator, automatically generate a skinpack after you uploaded your skins", 
         "skin_converter": "Minecraft skin pack creator",
         "add": "Add skin",
         "description": "Please upload your skin file overthere to compress them into a .mcpack file. You can still upload it in the process",
