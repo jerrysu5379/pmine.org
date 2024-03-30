@@ -2,11 +2,11 @@
 
 {%block body%}
 
-<h1 class="lang" key="uuidgen"></h1>
+<h1>{{trans.uuidgen}}</h1>
 <hr>
 <div class="d-grid gap-2">
-    <button type="button" class="btn btn-pink lang" onclick="generateUUID('v4', 1);" key="generate"></button>
-    <button type="button" class="btn btn-pink lang" onclick="generateUUID('v4', 4);" key="generate4"></button>
+    <button type="button" class="btn btn-pink" onclick="generateUUID('v4', 1);">{{trans.generate}}</button>
+    <button type="button" class="btn btn-pink" onclick="generateUUID('v4', 4);">{{trans.generate4}}</button>
 </div>
 <br>
 <div class="output">
