@@ -5,7 +5,7 @@ list_of_languages = ["en", "zh-hans", "ja"]
 
 # Set language
 def set_language(request, lan):
-    # Ensure the language code is in the list of languages
+    # Ensure the language code is in the list of languages 
     if lan not in list_of_languages:
         lan = 'en'  # Default to English if the language code is not recognized
 
@@ -39,7 +39,7 @@ def get_language(request):
     # If the language is in the path 
     language = request.session.get('language', request.path.split('/')[1]) 
     print(language, '\t', request.path) 
-    if language in list_of_languages:
+    if language in list_of_languages: 
         return language 
     
     # If the language is in cookie or use the default language 

@@ -118,9 +118,7 @@ LANGUAGES = [
     ('zh-hans', _('Chinese')),
 ] 
 
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
+TIME_ZONE = 'UTC' 
 
 USE_TZ = True
 
