@@ -6,16 +6,16 @@
     <h1>{{trans.skin_converter}}</h1>
     <hr>
     <form method="POST" action="{{url}}/v3/" enctype="multipart/form-data" class="my-4">
-        {% csrf_token %}
+        {% csrf_token %} 
         <div class="mb-3">
-            <label for="Upload" class="form-label">{{trans.add}}</label>
-            <input class="form-control" type="file" id="Upload" name="Upload" multiple>
+            <label for="Upload" class="form-label">{{trans.desc}}<br>{{trans.add}}</label>
+            <input class="form-control" type="file" id="Upload" name="Upload" accept="image/png" multiple>
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">{{trans.enter_name}}</label>
             <input class="form-control" type="text" id="name" name="name">
         </div>
-        <button type="submit" class="btn btn-pink">{{trans.upload}}</button>
+        <button type="submit" class="btn btn-pink submit">{{trans.upload}}</button>
     </form>
     
 </div>
@@ -23,7 +23,9 @@
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.querySelector('form');
         form.addEventListener('submit', function (event) {
-            event.preventDefault();
+            event.preventDefault(); 
+            form.querySelector(".submit").textContent = "{{trans.processing}}"; 
+            form.querySelector(".submit").classList.add("disabled");  
 
             var formData = new FormData(form);
 

@@ -1,6 +1,6 @@
 {%extends "bbcodetemp/template.html"%}
 
-{%block body%} 
+{%block body%}
 
 <head>
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
@@ -9,7 +9,7 @@
     </div>
 </head>
 <main>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" style="justify-content: center;">
         <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
@@ -19,10 +19,11 @@
                     <ul class="list-unstyled mt-3 mb-4">
                         <li class="lang" key="temp1d1"></li>
                         <li class="lang" key="temp1d2"></li>
-                        <li class="lang" key="temp1d3"></li> 
-                        <li class="lang" key="temp1d4"></li> 
+                        <li class="lang" key="temp1d3"></li>
+                        <li class="lang" key="temp1d4"></li>
                     </ul>
-                    <a href="klp-cinder_style/"><button type="button" class="w-100 btn btn-lg btn-pink active lang" key="use">使用</button></a> 
+                    <a href="klp-cinder_style/"><button type="button" class="w-100 btn btn-lg btn-pink active lang"
+                            key="use">使用</button></a>
                 </div>
             </div>
         </div>
@@ -35,10 +36,11 @@
                     <ul class="list-unstyled mt-3 mb-4">
                         <li class="lang" key="temp2d1"></li>
                         <li class="lang" key="temp2d2"></li>
-                        <li class="lang" key="temp2d3"></li> 
-                        <li class="lang" key="temp2d4"></li> 
+                        <li class="lang" key="temp2d3"></li>
+                        <li class="lang" key="temp2d4"></li>
                     </ul>
-                    <a href="fds-xiaoyan_style/"><button type="button" class="w-100 btn btn-lg btn-pink active lang" key="use">使用</button></a> 
+                    <a href="fds-xiaoyan_style/"><button type="button" class="w-100 btn btn-lg btn-pink active lang"
+                            key="use">使用</button></a>
                 </div>
             </div>
         </div>
@@ -51,10 +53,28 @@
                     <ul class="list-unstyled mt-3 mb-4">
                         <li class="lang" key="temp3d1"></li>
                         <li class="lang" key="temp3d2"></li>
-                        <li class="lang" key="temp3d3"></li> 
-                        <li class="lang" key="temp3d4"></li> 
+                        <li class="lang" key="temp3d3"></li>
+                        <li class="lang" key="temp3d4"></li>
                     </ul>
-                    <a href="fds-redstone_style/"><button type="button" class="w-100 btn btn-lg btn-pink active lang" key="use"></button></a> 
+                    <a href="fds-redstone_style/"><button type="button" class="w-100 btn btn-lg btn-pink active lang"
+                            key="use"></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">{{trans.spxx.title}}</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>{{trans.spxx.klpspxxd1}}</li>
+                        <li>{{trans.spxx.klpspxxd2}}</li>
+                        <li>{{trans.spxx.klpspxxd3}}</li>
+                        <li>{{trans.spxx.klpspxxd4}}</li>
+                    </ul>
+                    <a href="spxxklp/view"><button type="button" class="w-100 btn btn-lg btn-pink active lang"
+                            key="use"></button></a>
                 </div>
             </div>
         </div>
@@ -62,4 +82,4 @@
 
 </main>
 
-{%endblock%} 
+{%endblock%}

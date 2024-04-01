@@ -9,16 +9,18 @@
         {% csrf_token %}
         <div class="mb-3">
             <label for="Upload" class="form-label">{{trans.add_desc}}</label>
-            <input class="form-control" type="file" id="Upload" name="Upload" multiple>
+            <input class="form-control" type="file" id="Upload" name="Upload" accept="image/png" multiple>
         </div>
-        <button type="submit" class="btn btn-pink active">{{trans.upload}}</button>
+        <button type="submit" class="btn btn-pink submit">{{trans.upload}}</button>
     </form>
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.querySelector('form');
         form.addEventListener('submit', function (event) {
-            event.preventDefault();
+            event.preventDefault(); 
+            form.querySelector(".submit").textContent = "{{trans.processing}}"; 
+            form.querySelector(".submit").classList.add("disabled");  
 
             var formData = new FormData(form);
 
