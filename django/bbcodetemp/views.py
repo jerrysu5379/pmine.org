@@ -56,8 +56,9 @@ trantext ={
             "klpspxxd4": "制作：@我是redstone @Cinder", 
             "desc": "这是一个特别为苦力怕论坛制作的 SPXX 版本。SPXX 原本是可以自动在 Minecraft 官网中复制粘贴新闻的符合 MCBBS 排版的 BBCode，方便译者在论坛更加便捷的发帖。由于 MCBBS 发生了一些事情，我和 @Cinder 决定将其进行一些改动，以更加适应苦力怕论坛的排版，方便苦力怕论坛的用户使用。我们注意到原软件使用的是 CC0 协议，因此我们对其进行更改是符合其版权协议的。感谢 SPXFellow 对 SPXX 的开发乃至 Minecraft 资讯翻译的巨大贡献", 
             "orilink": "原版链接", 
-            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本。下载之后需要启用插件，启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
+            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本，保存并启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
             "download": "下载", 
+            "downloadtampermonkey": "下载油猴脚本插件", 
             "github": "Github" 
         } 
     },
@@ -108,8 +109,9 @@ trantext ={
             "klpspxxd4": "制作：@我是redstone @Cinder", 
             "desc": "这是一个特别为苦力怕论坛制作的 SPXX 版本。SPXX 原本是可以自动在 Minecraft 官网中复制粘贴新闻的符合 MCBBS 排版的 BBCode，方便译者在论坛更加便捷的发帖。由于 MCBBS 发生了一些事情，我和 @Cinder 决定将其进行一些改动，以更加适应苦力怕论坛的排版，方便苦力怕论坛的用户使用。我们注意到原软件使用的是 CC0 协议，因此我们对其进行更改是符合其版权协议的。感谢 SPXFellow 对 SPXX 的开发乃至 Minecraft 资讯翻译的巨大贡献", 
             "orilink": "原版链接", 
-            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本。下载之后需要启用插件，启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
+            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本，保存并启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
             "download": "下载", 
+            "downloadtampermonkey": "下载油猴脚本插件", 
             "github": "Github" 
         } 
     },
@@ -160,8 +162,9 @@ trantext ={
             "klpspxxd4": "制作：@我是redstone @Cinder", 
             "desc": "这是一个特别为苦力怕论坛制作的 SPXX 版本。SPXX 原本是可以自动在 Minecraft 官网中复制粘贴新闻的符合 MCBBS 排版的 BBCode，方便译者在论坛更加便捷的发帖。由于 MCBBS 发生了一些事情，我和 @Cinder 决定将其进行一些改动，以更加适应苦力怕论坛的排版，方便苦力怕论坛的用户使用。我们注意到原软件使用的是 CC0 协议，因此我们对其进行更改是符合其版权协议的。感谢 SPXFellow 对 SPXX 的开发乃至 Minecraft 资讯翻译的巨大贡献", 
             "orilink": "原版链接", 
-            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本。下载之后需要启用插件，启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
+            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本，保存并启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
             "download": "下载", 
+            "downloadtampermonkey": "下载油猴脚本插件", 
             "github": "Github" 
         }
     }
