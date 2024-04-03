@@ -10,8 +10,8 @@ def set_color(request, col):
     if col not in list_of_colors:
         col = 'pink'  # Default to pink if the color code is not recognized
 
-    # Change the session for the user
-    request.session['color'] = default_color  
+    # Change the session for the user 
+    request.session['color'] = col  
 
     # Return to the origin 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/')) 
@@ -19,7 +19,7 @@ def set_color(request, col):
 # Get color
 def get_color(request): 
     # Get the color from the user, default to 'en' if not set 
-    col = request.session.get('color', 'pink') 
+    col = request.session.get('color', list_of_colors[6]) 
     
     if col in list_of_colors: 
         return col 

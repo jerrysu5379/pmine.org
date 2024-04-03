@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from op import language
+from op import prop 
 
 # Create your views here.
 trantext = {
@@ -25,7 +25,10 @@ trantext = {
 } 
 
 def index(request): 
+
+    pageprop = prop.getprop(request) 
+
     return render(request, "uuidgen/index.html", {
-        'lang': language.get_language(request), 
-        'trans': trantext[f"{language.get_language(request)}"], 
+        "pageprop": pageprop, 
+        "trans": trantext[pageprop["lang"]], 
     }) 

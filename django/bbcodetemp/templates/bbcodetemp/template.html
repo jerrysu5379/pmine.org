@@ -18,18 +18,18 @@
 <body>
     {% load static %} 
 
-    {% include 'op/'|add:lang|add:'/navbar.html' %}
+    {% include 'op/'|add:pageprop.lang|add:'/navbar.html' %}
 
     <div class="container" style="padding-top: 100px; padding-bottom: 30px">
         {% block body %}
         {% endblock %}
     </div>
 
-    {% include 'op/'|add:lang|add:'/footdiv.html' %}
+    {% include 'op/'|add:pageprop.lang|add:'/footdiv.html' %}
 
     <script type="text/javascript" src="https://cdn.pmine.org/jQuery/jquery.js"></script>
     <script>
-    lang = "{{lang}}" 
+    lang = "{{pageprop.lang}}" 
     refreash()
     </script> 
 </body>

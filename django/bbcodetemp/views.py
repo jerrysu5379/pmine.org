@@ -1,7 +1,7 @@
 import os 
 from django.http import FileResponse
 from django.shortcuts import render 
-from op import language 
+from op import prop 
 from django.conf import settings 
 
 # Create your views here.
@@ -171,33 +171,37 @@ trantext ={
 } 
 
 def index(request): 
+    pageprop = prop.getprop(request) 
     return render(request, "bbcodetemp/index.html", { 
-        'lang': language.get_language(request), 
-        'trans': trantext[f"{language.get_language(request)}"], 
+        'pageprop': pageprop, 
+        'trans': trantext[pageprop["lang"]], 
         'url': BACK_URL, 
         'temp': "index", 
     }) 
 
 def templates(request, temp): 
+    pageprop = prop.getprop(request) 
     return render(request, f"bbcodetemp/{temp}/index.html", { 
-        'lang': language.get_language(request), 
-        'trans': trantext[f"{language.get_language(request)}"], 
+        'pageprop': pageprop, 
+        'trans': trantext[pageprop["lang"]], 
         'url': BACK_URL, 
         'temp': temp, 
     }) 
 
 def viewtemp(request, temp): 
+    pageprop = prop.getprop(request) 
     return render(request, f"bbcodetemp/{temp}/temp.html", { 
-        'lang': language.get_language(request), 
-        'trans': trantext[f"{language.get_language(request)}"], 
+        'pageprop': pageprop, 
+        'trans': trantext[pageprop["lang"]], 
         'url': BACK_URL, 
         'temp': temp, 
     }) 
 
 def spxxklp(request): 
+    pageprop = prop.getprop(request) 
     return render(request, f"bbcodetemp/spxxforklp/index.html", { 
-        'lang': language.get_language(request), 
-        'trans': trantext[f"{language.get_language(request)}"], 
+        'pageprop': pageprop, 
+        'trans': trantext[pageprop["lang"]], 
         'url': BACK_URL 
     }) 
 

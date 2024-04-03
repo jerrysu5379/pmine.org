@@ -1,6 +1,6 @@
 from django.shortcuts import render 
 from django.views.generic import TemplateView
-from op import language 
+from op import prop  
 
 class RobotsTxtView(TemplateView):
     template_name = "robots.txt"
@@ -8,7 +8,10 @@ class RobotsTxtView(TemplateView):
 
 # Create your views here.
 def index(request): 
-    return render(request, f"index/{language.get_language(request)}/index.html") 
+    pageprop = prop.getprop(request) 
+    return render(request, f"index/{pageprop["lang"]}/index.html", {
+        "pageprop": pageprop
+    }) 
 
 def page404(request): 
     return render(request, f"index/404.html") 

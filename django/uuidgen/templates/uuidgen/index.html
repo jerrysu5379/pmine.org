@@ -5,8 +5,8 @@
 <h1>{{trans.uuidgen}}</h1>
 <hr>
 <div class="d-grid gap-2">
-    <button type="button" class="btn btn-pink" onclick="generateUUID('v4', 1);">{{trans.generate}}</button>
-    <button type="button" class="btn btn-pink" onclick="generateUUID('v4', 4);">{{trans.generate4}}</button>
+    <button type="button" class="btn btn-{{pageprop.color}}" onclick="generateUUID('v4', 1);">{{trans.generate}}</button>
+    <button type="button" class="btn btn-{{pageprop.color}}" onclick="generateUUID('v4', 4);">{{trans.generate4}}</button>
 </div>
 <br>
 <div class="output">
@@ -17,7 +17,7 @@
     </div>
     <br>
     <div class="d-grid gap-2">
-        <button class="copy btn btn-pink" id="copy" onclick="copyUUIDs();">Copy UUIDs</button>
+        <button class="copy btn btn-{{pageprop.color}}" id="copy" onclick="copyUUIDs();">Copy UUIDs</button>
     </div>
 </div>
 <script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{lang}}">
+<html lang="{{pageprop.lang}}">
 
 <head>
     <meta charset="UTF-8">
@@ -14,14 +14,14 @@
 <body>
     {% load static %}
 
-    {% include 'op/'|add:lang|add:'/navbar.html' %}
+    {% include 'op/'|add:pageprop.lang|add:'/navbar.html' %}
 
     <div class="container" style="padding-top: 100px; padding-bottom: 30px">
         {% block body %}
         {% endblock %}
     </div>
 
-    {% include 'op/'|add:lang|add:'/footdiv.html' %}
+    {% include 'op/'|add:pageprop.lang|add:'/footdiv.html' %}
 
 </body>
 
