@@ -28,7 +28,7 @@
         title.classList.add("nav-item");
         title.innerHTML = `<a data-id="${cont.id}" class="btn btn-outline-secondary skins" style="width: 100%">${cont.name}</a>`;
         document.querySelector('#skins').appendChild(title);
-    } 
+    }
 
     function inner(button) {
         fetch(`${url}/v3/app/getprop/${button.dataset.id}`)
@@ -39,43 +39,51 @@
                 const deleteskin = `${url}/v3/process/${button.dataset.id}/deleteskin`;
 
                 const content = `
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${data.name}</h5>
-                        <p class="card-text"><label>{{trans.model}}</label>:${data.model}</p>
-                        <canvas id="skin_container"></canvas> 
-                        <form action="${changenameurl}" method="post" style="padding-top:30px">
-                            {% csrf_token %}
-                            <label>{{trans.skin_name}}</label> 
-                            <input type="text" name="name">
-                            <input type="submit">
-                        </form>
-                        <form action="${changemodelurl}" method="post">
-                            {% csrf_token %}
-                            <label>{{trans.model}}</label> 
-                            <select name="model" id="model">
-                                <option value="geometry.humanoid.custom"></option>
-                                <option value="geometry.humanoid.custom">Steve</option>
-                                <option value="geometry.humanoid.customSlim">Alex</option>
-                            </select>
-                            <input type="submit">
-                        </form>
-                        <form action="${deleteskin}" method="post">
-                            {% csrf_token %}
-                            <label>{{trans.delete_this_file}}</label> <input type="submit">
-                        </form>
-                    </div>
-                </div>
-            `;
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">${data.name}</h5>
+        <p class="card-text"><label>{{trans.model}}</label>:${data.model}</p>
+        <canvas id="skin_container"></canvas>
+        <table class="table">
+            <tr>
+                <form action="${changenameurl}" method="post" style="padding-top:30px">
+                    {% csrf_token %}
+                    <th scope="row"><label>{{trans.skin_name}}</label></th>
+                    <td><input type="text" name="name"></td>
+                    <td><input type="submit" value="{{trans.apply}}"></td>
+                </form>
+            </tr>
+            <tr>
+                <form action="${changemodelurl}" method="post">
+                    {% csrf_token %}
+                    <th scope="row"><label>{{trans.model}}</label></th> 
+                    <td><select name="model" id="model">
+                        <option value="geometry.humanoid.custom"></option>
+                        <option value="geometry.humanoid.custom">Steve</option>
+                        <option value="geometry.humanoid.customSlim">Alex</option>
+                    </select></td>
+                    <td><input type="submit" value="{{trans.apply}}"></td> 
+                </form>
+            </tr>
+            <tr>
+                <form action="${deleteskin}" method="post">
+                    {% csrf_token %}
+                    <th scope="row"><label>{{trans.delete_this_file}}</label></th> 
+                    <td><input type="submit" value="{{trans.delete_this_file}}"></td>
+                </form>
+            </tr>
+        </table>
+    </div>
+</div>`;
 
-                document.querySelector('#cont').innerHTML = content; 
+                document.querySelector('#cont').innerHTML = content;
 
                 let skinViewer = new skinview3d.SkinViewer({
-                    canvas: document.getElementById("skin_container"), 
-                    width: 300, 
-                    height: 400, 
-                    skin: `{{url}}/v3/picture/${data.id}` 
-                }) 
+                    canvas: document.getElementById("skin_container"),
+                    width: 300,
+                    height: 400,
+                    skin: `{{url}}/v3/picture/${data.id}`
+                })
 
                 form();
             });
