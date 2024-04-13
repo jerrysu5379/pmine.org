@@ -31,6 +31,7 @@ urlpatterns = [
 
     # Apps 
     path('skincomp/', include("peskincomp.urls")), 
+    path('skinview/', include("skinview.urls")), 
     path('bbcode/', include("bbcodetemp.urls")), 
     path('uuid/', include("uuidgen.urls")), 
     path('maths/', include("maths.urls")), 
@@ -47,6 +48,7 @@ localized_patterns = [
 
     # Apps 
     path('skincomp/', include("peskincomp.urls")), 
+    path('skinview/', include("skinview.urls")), 
     path('bbcode/', include("bbcodetemp.urls")), 
     path('uuid/', include("uuidgen.urls")), 
     path('maths/', include("maths.urls")), 

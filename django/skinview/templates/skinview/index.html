@@ -1,0 +1,17 @@
+{%extends "skinview/template.html"%}
+
+{%block body%}
+
+<canvas id="skin_container"></canvas>
+<a class="btn btn-{{pageprop.color}} mt-3" id="downloadButton">Download skin</a>
+<label>File:
+    <input type="file" id="skin" accept=".png" /> 
+</label>
+<label>Model:
+    <select id="skin_model">
+        <option value="auto-detect" selected>Auto detect</option>
+        <option value="default">Default</option>
+        <option value="slim">Slim</option>
+    </select>
+</label>
+{%endblock%}

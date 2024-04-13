@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'bbcodetemp', 
     'maths', 
     'peskincomp', 
+    'skinview', 
     'uuidgen', 
     'django.contrib.admin',
     'django.contrib.auth',

@@ -44,37 +44,30 @@
         <h5 class="card-title">${data.name}</h5>
         <p class="card-text"><label>{{trans.model}}</label>:${data.model}</p>
         <canvas id="skin_container"></canvas>
-        <table class="table">
-            <tr>
-                <form action="${changenameurl}" method="post" style="padding-top:30px">
-                    {% csrf_token %}
-                    <th scope="row"><label>{{trans.skin_name}}</label></th>
-                    <td><input type="text" name="name"></td>
-                    <td><input type="submit" value="{{trans.apply}}"></td>
-                </form>
-            </tr>
-            <tr>
-                <form action="${changemodelurl}" method="post">
-                    {% csrf_token %}
-                    <th scope="row"><label>{{trans.model}}</label></th> 
-                    <td><select name="model" id="model">
-                        <option value="geometry.humanoid.custom"></option>
-                        <option value="geometry.humanoid.custom">Steve</option>
-                        <option value="geometry.humanoid.customSlim">Alex</option>
-                    </select></td>
-                    <td><input type="submit" value="{{trans.apply}}"></td> 
-                </form>
-            </tr>
-            <tr>
-                <form action="${deleteskin}" method="post">
-                    {% csrf_token %}
-                    <th scope="row"><label>{{trans.delete_this_file}}</label></th> 
-                    <td><input type="submit" value="{{trans.delete_this_file}}"></td>
-                </form>
-            </tr>
-        </table>
+        <form action="${changenameurl}" method="post" style="padding-top:30px">
+            {% csrf_token %}
+            <label><b>{{trans.skin_name}}</b></label>
+            <input type="text" name="name">
+            <input type="submit" value="{{trans.apply}}">
+        </form>
+        <form action="${changemodelurl}" method="post">
+            {% csrf_token %}
+            <label><b>{{trans.model}}</b></label>
+            <select name="model" id="model">
+                <option value="geometry.humanoid.custom"></option>
+                <option value="geometry.humanoid.custom">Steve</option>
+                <option value="geometry.humanoid.customSlim">Alex</option>
+            </select>
+            <input type="submit" value="{{trans.apply}}">
+        </form>
+        <form action="${deleteskin}" method="post">
+            {% csrf_token %}
+            <th scope="row"><label>{{trans.delete_this_file}}</label></th>
+            <td><input type="submit" value="{{trans.delete_this_file}}"></td>
+        </form>
     </div>
-</div>`;
+</div>
+`;
 
                 document.querySelector('#cont').innerHTML = content;
 
@@ -86,7 +79,7 @@
                 })
 
                 form();
-            });
+            }); 
     }
 
     function form() {
@@ -140,6 +133,6 @@
             <!-- Content will be displayed here when a skin is clicked -->
         </div>
     </div>
-</div>
+</div> 
 
 {%endblock%}
