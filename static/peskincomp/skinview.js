@@ -59,7 +59,8 @@ function reloadSkin() {
         })
         .catch(e => {
             input.setCustomValidity("Image can't be loaded.");
-            console.error(e);
+            console.error(e); 
+            errorlog(e); 
             // Revoke the blob URL in case of an error as well
             URL.revokeObjectURL(url);
         }); 
@@ -71,12 +72,72 @@ function reloadSkin() {
     } 
     */  
 
-}
+} 
+
+function uploadPanorama(){ 
+    const input = document.getElementById("panoramaFile");
+    const file = input.files[0]; 
+
+    if (file) {
+        url = URL.createObjectURL(file);
+    } else { 
+        url = "files/background/0.png";
+    } 
+} 
+
+function reloadPanorama() {
+    const input = document.getElementById("panorama_url");
+    const url = obtainTextureUrl("panorama_url");
+    if (url === "") {
+        skinViewer.background = null;
+        input.setCustomValidity("");
+    } else {
+        skinViewer.loadPanorama(url)
+            .then(() => input.setCustomValidity(""))
+            .catch(e => {
+                input.setCustomValidity("Image can't be loaded.");
+                console.error(e);
+            });
+    }
+} 
+
+function changeIntensity() { 
+    const input = document.getElementById("globalIntensity"); 
+    const value = input.value; 
+    console.log(value); 
+    skinViewer.globalLight.intensity = value; 
+} 
+
+function changeCameraIntensity() { 
+    const input = document.getElementById("cameraIntensity"); 
+    const value = input.value; 
+    console.log(value); 
+    skinViewer.cameraLight.intensity = value; 
+} 
+
+function changeWidth() { 
+    const input = document.getElementById("width"); 
+    const value = input.value; 
+    console.log(value); 
+	skinViewer.width = value; 
+} 
+
+function changeHeight() { 
+    const input = document.getElementById("height"); 
+    const value = input.value; 
+    console.log(value); 
+	skinViewer.height = value; 
+} 
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('downloadButton').addEventListener('click', downloadImage);
-    errorlog('All ready!');
     document.getElementById("skin").addEventListener("change", reloadSkin);
-    document.getElementById("skin_model").addEventListener("change", reloadSkin);
-
+    document.getElementById("skin_model").addEventListener("change", reloadSkin); 
+    document.getElementById("panorama_url").addEventListener("change", reloadPanorama); 
+    document.getElementById("panoramaFile").addEventListener("change", uploadPanorama); 
+    document.getElementById("globalIntensity").addEventListener("change", changeIntensity); 
+    document.getElementById("cameraIntensity").addEventListener("change", changeCameraIntensity); 
+    document.getElementById("width").addEventListener("change", changeWidth); 
+    document.getElementById("height").addEventListener("change", changeHeight); 
+    errorlog('All ready!'); 
 }) 

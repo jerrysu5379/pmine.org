@@ -9638,7 +9638,7 @@ var arrLang = {
         "compile": "Convert", 
         "compileandcopy": "Convert and copy", 
     },
-    "zh": {
+    "zh-hans": {
         "bbcodetemp": "BBCode 模板",
         "description": "您可以选择模板进行填写，点击添加段落添加段落后填写，填写完成之后点击 Convert 之后复制生成的内容即可复制早论坛之中。所有支持\nBBCode 的论坛均可使用（包括 Discuz 论坛，例如 MCBBS 和苦力怕论坛等） ",
         "temp1": "模板一", 

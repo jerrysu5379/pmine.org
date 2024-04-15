@@ -3,15 +3,56 @@
 {%block body%}
 
 <canvas id="skin_container"></canvas>
-<a class="btn btn-{{pageprop.color}} mt-3" id="downloadButton">Download skin</a>
-<label>File:
-    <input type="file" id="skin" accept=".png" /> 
-</label>
-<label>Model:
-    <select id="skin_model">
-        <option value="auto-detect" selected>Auto detect</option>
-        <option value="default">Default</option>
-        <option value="slim">Slim</option>
-    </select>
-</label>
+<p>
+    <a class="btn btn-{{pageprop.color}} mt-3" id="downloadButton">Download skin</a> 
+</p> 
+<p>
+    <label>
+        <b>File:</b> 
+        <input type="file" id="skin" accept=".png" />
+    </label> 
+</p> 
+<p>
+    <label>
+        <b>Width:</b> 
+        <input type="text" id="width" value="300" />
+    </label> 
+</p> 
+<p>
+    <label>
+        <b>Height:</b> 
+        <input type="text" id="height" value="400" /> 
+    </label> 
+</p> 
+<p>
+    <label>
+        <b>Model:</b>
+        <select id="skin_model">
+            <option value="auto-detect" selected>Auto detect</option>
+            <option value="default">Default</option>
+            <option value="slim">Slim</option>
+        </select>
+    </label>
+</p>
+<p>
+    <label>
+        <b>Panorama:</b>
+        <input type="text" id="panorama_url" hidden="true" value="" />
+        <input type="file" id="panoramaFile" />
+    </label>
+</p>
+<p>
+    <label class="form-label">
+        <b>Global intensity:</b>
+        <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="10" step="0.1" value="3"
+            id="globalIntensity">
+    </label>
+</p>
+<p>
+    <label class="form-label">
+        <b>Camera intensity:</b>
+        <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="10" step="0.1" value="3"
+            id="cameraIntensity">
+    </label>
+</p>
 {%endblock%}

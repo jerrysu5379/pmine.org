@@ -49,19 +49,19 @@ trantext ={
         "compile": "Convert", 
         "compileandcopy": "Convert and copy", 
         "spxx":{ 
-            "title": "苦力怕论坛 SPXX", 
-            "klpspxxd1": "只适合翻译 Minecraft 资讯使用", 
-            "klpspxxd2": "符合苦力怕论坛版规", 
-            "klpspxxd3": "使用油猴脚本编写", 
-            "klpspxxd4": "制作：@我是redstone @Cinder", 
-            "desc": "这是一个特别为苦力怕论坛制作的 SPXX 版本。SPXX 原本是可以自动在 Minecraft 官网中复制粘贴新闻的符合 MCBBS 排版的 BBCode，方便译者在论坛更加便捷的发帖。由于 MCBBS 发生了一些事情，我和 @Cinder 决定将其进行一些改动，以更加适应苦力怕论坛的排版，方便苦力怕论坛的用户使用。我们注意到原软件使用的是 CC0 协议，因此我们对其进行更改是符合其版权协议的。感谢 SPXFellow 对 SPXX 的开发乃至 Minecraft 资讯翻译的巨大贡献", 
-            "orilink": "原版链接", 
-            "howtouse": "下载之后，请先安装 Tamper Monkey 插件。下载之后将进入插件主页，选择添加插件（如下图所示），之后再新建的插件中粘贴下载的文本，保存并启用之后即可在 Minecraft 新闻之中直接拷贝 BBCode ", 
-            "download": "下载", 
-            "downloadtampermonkey": "下载油猴脚本插件", 
-            "github": "Github" 
+            "title": "KLPBBS SPXX", 
+            "klpspxxd1": "Please use this only when translating Minecraft News", 
+            "klpspxxd2": "Designated for KLPBBS use", 
+            "klpspxxd3": "Use with Tampermonkey", 
+            "klpspxxd4": "Author: FDS@Redstone / KLPBBS@Cinder", 
+            "desc": "This is a special version of SPXX designed for KLPBBS. The original Minecraft SPXX can copy content from the official Minecraft website into BBCode with the MCBBS format, helping translators focus on translation rather than formatting. Due to the permanent cessation of MCBBS's operations, we have made some modifications for KLPBBS to simplify posting for translators. The MCBBS SPXX uses the CC0 license, so modification and redistribution do not violate CC0. Special thanks to SPXFellow for your contributions to SPXX and the entire Minecraft community.", 
+            "orilink": "MCBBS SPXX", 
+            "howtouse": "After downloading the JavaScript, please install Tampermonkey. Then, navigate to the homepage, add a script (as shown in the picture below), copy and paste the JavaScript into it, and save. After doing this, you should see 'copy bbcode' in the Minecraft articles.", 
+            "download": "Download", 
+            "downloadtampermonkey": "Download Tampermonkey", 
+            "github": "GitHub" 
         } 
-    },
+    }, 
     "zh-hans": {
         "bbcodetemp": "BBCode 模板",
         "description": "您可以选择模板进行填写，点击添加段落添加段落后填写，填写完成之后点击 Convert 之后复制生成的内容即可复制早论坛之中。所有支持\nBBCode 的论坛均可使用（包括 Discuz 论坛，例如 MCBBS 和苦力怕论坛等） ",

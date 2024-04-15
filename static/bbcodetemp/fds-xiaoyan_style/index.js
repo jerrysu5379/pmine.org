@@ -66,7 +66,7 @@ ${element.querySelector("#honmo").value}
     out += `[/td][/tr]
 [/table]
 [/align]`
-    out += `Formatted by [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url]`
+    out += `Formatted by [url=https://pmine.org/bbcode]PMINE TOOL BOX[/url]`
     document.querySelector("#output").innerHTML = out.replace(/(\r?\n)/g, "<br>");
 }
 
@@ -94,7 +94,7 @@ ${element.querySelector("#honmo").value}
     out += `[/td][/tr]
 [/table]
 [/align]`
-    out += `Formatted by [url=https://pmine.com/bbcode]PMINE TOOL BOX[/url]`
+    out += `Formatted by [url=https://pmine.org/bbcode]PMINE TOOL BOX[/url]`
     navigator.clipboard.writeText(out);
     alert("Copied")
 }
