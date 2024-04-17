@@ -4,26 +4,26 @@
 
 <canvas id="skin_container"></canvas>
 <p>
-    <a class="btn btn-{{pageprop.color}} mt-3" id="downloadButton">Download skin</a> 
-</p> 
+    <a class="btn btn-{{pageprop.color}} mt-3" id="downloadButton">Download skin</a>
+</p>
 <p>
     <label>
-        <b>File:</b> 
+        <b>File:</b>
         <input type="file" id="skin" accept=".png" />
-    </label> 
-</p> 
+    </label>
+</p>
 <p>
     <label>
-        <b>Width:</b> 
+        <b>Width:</b>
         <input type="text" id="width" value="300" />
-    </label> 
-</p> 
+    </label>
+</p>
 <p>
     <label>
-        <b>Height:</b> 
-        <input type="text" id="height" value="400" /> 
-    </label> 
-</p> 
+        <b>Height:</b>
+        <input type="text" id="height" value="400" />
+    </label>
+</p>
 <p>
     <label>
         <b>Model:</b>
@@ -54,5 +54,168 @@
         <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="10" step="0.1" value="3"
             id="cameraIntensity">
     </label>
+</p>
+<p>
+<table class="table">
+    <tr>
+        <b>Left Arm Rotation: </b>
+    </tr>
+    <tr>
+        <td>
+            <label>X</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinLeftArmRotationX">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Y</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinLeftArmRotationY">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Z</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinLeftArmRotationZ">
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <b>Right Arm Rotation: </b>
+    </tr>
+    <tr>
+        <td>
+            <label>X</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinRightArmRotationX">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Y</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinRightArmRotationY">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Z</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinRightArmRotationZ">
+        </td>
+    </tr>
+</table> 
+<table class="table">
+    <tr>
+        <b>Head Rotation: </b>
+    </tr>
+    <tr>
+        <td>
+            <label>X</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinHeadRotationX">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Y</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinHeadRotationY">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Z</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinHeadRotationZ">
+        </td>
+    </tr>
+</table> 
+<table class="table">
+    <tr>
+        <b>Left Leg Rotation: </b>
+    </tr>
+    <tr>
+        <td>
+            <label>X</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinLeftLegRotationX">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Y</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinLeftLegRotationY">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Z</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinLeftLegRotationZ">
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <b>Right Leg Rotation: </b>
+    </tr>
+    <tr>
+        <td>
+            <label>X</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinRightLegRotationX">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Y</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinRightLegRotationY">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Z</label>
+        </td>
+        <td>
+            <input type="range" class="form-range form-range-{{pageprop.color}}" min="0" max="6.28" step="0.05"
+                value="0" id="skinRightLegRotationZ">
+        </td>
+    </tr>
+</table> 
+
 </p>
 {%endblock%}

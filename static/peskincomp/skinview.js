@@ -83,11 +83,15 @@ function uploadPanorama(){
     } else { 
         url = "files/background/0.png";
     } 
+    
+    document.getElementById("panorama_url").value = url; 
+    reloadPanorama() 
 } 
 
 function reloadPanorama() {
     const input = document.getElementById("panorama_url");
-    const url = obtainTextureUrl("panorama_url");
+    const url = input.value;
+    console.log(url); 
     if (url === "") {
         skinViewer.background = null;
         input.setCustomValidity("");
@@ -129,6 +133,97 @@ function changeHeight() {
 	skinViewer.height = value; 
 } 
 
+function changeSkinLeftArmRotationX() { 
+    const input = document.getElementById("skinLeftArmRotationX"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("leftArm").rotation.x = value; 
+} 
+
+function changeSkinLeftArmRotationY() { 
+    const input = document.getElementById("skinLeftArmRotationY"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("leftArm").rotation.y = value; 
+} 
+
+function changeSkinLeftArmRotationZ() { 
+    const input = document.getElementById("skinLeftArmRotationZ"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("leftArm").rotation.z = value; 
+} 
+
+function changeSkinRightArmRotationX() { 
+    const input = document.getElementById("skinRightArmRotationX"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("rightArm").rotation.x = value; 
+} 
+
+function changeSkinRightArmRotationY() { 
+    const input = document.getElementById("skinRightArmRotationY"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("rightArm").rotation.y = value; 
+} 
+
+function changeSkinRightArmRotationZ() { 
+    const input = document.getElementById("skinRightArmRotationZ"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("rightArm").rotation.z = value; 
+} 
+
+function changeSkinHeadRotationX() { 
+    const input = document.getElementById("skinHeadRotationX"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("head").rotation.x = value; 
+} 
+
+function changeSkinHeadRotationY() { 
+    const input = document.getElementById("skinHeadRotationY"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("head").rotation.y = value; 
+} 
+
+function changeSkinHeadRotationZ() { 
+    const input = document.getElementById("skinHeadRotationZ"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("head").rotation.z = value; 
+} 
+
+function changeSkinLeftLegRotationX() { 
+    const input = document.getElementById("skinLeftLegRotationX"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("leftLeg").rotation.x = value; 
+} 
+
+function changeSkinLeftLegRotationY() { 
+    const input = document.getElementById("skinLeftLegRotationY"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("leftLeg").rotation.y = value; 
+} 
+
+function changeSkinLeftLegRotationZ() { 
+    const input = document.getElementById("skinLeftLegRotationZ"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("leftLeg").rotation.z = value; 
+} 
+
+function changeSkinRightLegRotationX() { 
+    const input = document.getElementById("skinRightLegRotationX"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("rightLeg").rotation.x = value; 
+} 
+
+function changeSkinRightLegRotationY() { 
+    const input = document.getElementById("skinRightLegRotationY"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("rightLeg").rotation.y = value; 
+} 
+
+function changeSkinRightLegRotationZ() { 
+    const input = document.getElementById("skinRightLegRotationZ"); 
+    const value = input.value; 
+    skinViewer.playerObject.getObjectByName("rightLeg").rotation.z = value; 
+} 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('downloadButton').addEventListener('click', downloadImage);
     document.getElementById("skin").addEventListener("change", reloadSkin);
@@ -139,5 +234,23 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("cameraIntensity").addEventListener("change", changeCameraIntensity); 
     document.getElementById("width").addEventListener("change", changeWidth); 
     document.getElementById("height").addEventListener("change", changeHeight); 
+
+    document.getElementById("skinLeftArmRotationX").addEventListener("change", changeSkinLeftArmRotationX); 
+    document.getElementById("skinLeftArmRotationY").addEventListener("change", changeSkinLeftArmRotationY); 
+    document.getElementById("skinLeftArmRotationZ").addEventListener("change", changeSkinLeftArmRotationZ); 
+    document.getElementById("skinRightArmRotationX").addEventListener("change", changeSkinRightArmRotationX); 
+    document.getElementById("skinRightArmRotationY").addEventListener("change", changeSkinRightArmRotationY); 
+    document.getElementById("skinRightArmRotationZ").addEventListener("change", changeSkinRightArmRotationZ); 
+    document.getElementById("skinHeadRotationX").addEventListener("change", changeSkinHeadRotationX); 
+    document.getElementById("skinHeadRotationY").addEventListener("change", changeSkinHeadRotationY); 
+    document.getElementById("skinHeadRotationZ").addEventListener("change", changeSkinHeadRotationZ); 
+    document.getElementById("skinLeftArmRotationX").addEventListener("change", changeSkinLeftArmRotationX); 
+    document.getElementById("skinLeftArmRotationY").addEventListener("change", changeSkinLeftArmRotationY); 
+    document.getElementById("skinLeftArmRotationZ").addEventListener("change", changeSkinLeftArmRotationZ); 
+    document.getElementById("skinRightArmRotationX").addEventListener("change", changeSkinRightArmRotationX); 
+    document.getElementById("skinRightArmRotationY").addEventListener("change", changeSkinRightArmRotationY); 
+    document.getElementById("skinRightArmRotationZ").addEventListener("change", changeSkinRightArmRotationZ); 
+
     errorlog('All ready!'); 
 }) 
+ 
