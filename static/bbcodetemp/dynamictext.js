@@ -12,6 +12,6 @@ function alloc() {
         textField.style.height = "1px";
         textField.style.height = (textField.scrollHeight + 10) + "px"; 
     });
-}
+} 
 
 document.addEventListener("input", recalcheight); 

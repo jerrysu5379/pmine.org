@@ -244,12 +244,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("skinHeadRotationX").addEventListener("change", changeSkinHeadRotationX); 
     document.getElementById("skinHeadRotationY").addEventListener("change", changeSkinHeadRotationY); 
     document.getElementById("skinHeadRotationZ").addEventListener("change", changeSkinHeadRotationZ); 
-    document.getElementById("skinLeftArmRotationX").addEventListener("change", changeSkinLeftArmRotationX); 
-    document.getElementById("skinLeftArmRotationY").addEventListener("change", changeSkinLeftArmRotationY); 
-    document.getElementById("skinLeftArmRotationZ").addEventListener("change", changeSkinLeftArmRotationZ); 
-    document.getElementById("skinRightArmRotationX").addEventListener("change", changeSkinRightArmRotationX); 
-    document.getElementById("skinRightArmRotationY").addEventListener("change", changeSkinRightArmRotationY); 
-    document.getElementById("skinRightArmRotationZ").addEventListener("change", changeSkinRightArmRotationZ); 
+    document.getElementById("skinLeftLegRotationX").addEventListener("change", changeSkinLeftLegRotationX); 
+    document.getElementById("skinLeftLegRotationY").addEventListener("change", changeSkinLeftLegRotationY); 
+    document.getElementById("skinLeftLegRotationZ").addEventListener("change", changeSkinLeftLegRotationZ); 
+    document.getElementById("skinRightLegRotationX").addEventListener("change", changeSkinRightLegRotationX); 
+    document.getElementById("skinRightLegRotationY").addEventListener("change", changeSkinRightLegRotationY); 
+    document.getElementById("skinRightLegRotationZ").addEventListener("change", changeSkinRightLegRotationZ); 
 
     errorlog('All ready!'); 
 }) 

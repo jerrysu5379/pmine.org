@@ -9,13 +9,63 @@
     <meta name="keywords" content="Tool Box">
     <link href="https://cdn.pmine.org/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.pmine.org/bootstrap-5.3.2/js/bootstrap.bundle.min.js"> </script>
-    <link href="https://cdn.pmine.org/fdsprivate/pmine-bs.css" rel="stylesheet"> 
-    <script src="{{static_url}}peskincomp/skinview3d.bundle.js"> </script>  
-    <script type="text/javascript" src="https://cdn.pmine.org/jQuery/jquery.js"></script> 
+    <link href="https://cdn.pmine.org/fdsprivate/pmine-bs.css" rel="stylesheet">
+    <script src="{{static_url}}peskincomp/skinview3d.bundle.js"> </script>
+    <script type="text/javascript" src="https://cdn.pmine.org/jQuery/jquery.js"></script>
+    <!-- <script>
+        //MIT License
+        //Copyright (c) 2020-2023 Sean Bradley
+        //https://github.com/Sean-Bradley/Bender/blob/main/LICENSE
+        function bend(geometry, axis, angle) {
+            let theta = 0;
+            if (angle !== 0) {
+                const v = geometry.attributes.position.array; 
+                console.log(v); 
+                for (let i = 0; i < v.length; i += 3) {
+                    let x = v[i];
+                    let y = v[i + 1];
+                    let z = v[i + 2];
+                    switch (axis) {
+                        case "x":
+                            x = x * Math.cos(angle)
+                            break;
+                        case "y":
+                            y = y * Math.cos(angle)
+                            break;
+                        default: //z
+                            z = z * Math.cos(angle)
+                            break;
+                    }
+                    let sinTheta = Math.sin(theta);
+                    let cosTheta = Math.cos(theta);
+                    switch (axis) {
+                        case "x":
+                            v[i] = x;
+                            v[i + 1] = (y - 1.0 / angle) * cosTheta + 1.0 / angle;
+                            v[i + 2] = -(y - 1.0 / angle) * sinTheta;
+                            break;
+                        case "y":
+                            v[i] = -(z - 1.0 / angle) * sinTheta;
+                            v[i + 1] = y;
+                            v[i + 2] = (z - 1.0 / angle) * cosTheta + 1.0 / angle;
+                            break;
+                        default: //z
+                            v[i] = -(y - 1.0 / angle) * sinTheta;
+                            v[i + 1] = (y - 1.0 / angle) * cosTheta + 1.0 / angle;
+                            v[i + 2] = z;
+                            break;
+                    }; 
+                };
+                geometry.attributes.position.needsUpdate = true;
+            }; 
+        } 
+
+        function changeValue(value, rotation, start, end)
+    </script> --> 
 </head>
 
-<body> 
-    {% load static %} 
+<body>
+    {% load static %}
 
     {% include 'op/'|add:pageprop.lang|add:'/navbar.html' %}
 
@@ -24,10 +74,10 @@
         {% endblock %}
     </div>
 
-    {% include 'op/'|add:pageprop.lang|add:'/footdiv.html' %} 
-    
-    <script src="{{static_url}}peskincomp/skinview.js"> </script>  
+    {% include 'op/'|add:pageprop.lang|add:'/footdiv.html' %}
+
+    <script src="{{static_url}}peskincomp/skinview.js"> </script>
 
 </body>
 
-</html> 
+</html>
