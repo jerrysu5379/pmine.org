@@ -1,0 +1,72 @@
+{%extends "maths/template.html"%}
+
+{%block body%} 
+
+<form id="number" style="padding-top: 70px">
+    <div class="form-group">
+        <label for="digit" class="form-label"><b>Please choose the input numeration</b></label>
+        <select id="digit" class="form-select">
+            <option value="10">--Please choose the input numeration--</option>
+            <option value="2">Binary</option>
+            <option value="3">Ternary</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16">Hex</option>
+            <option value="32">Duotricemary notation</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="digitout" class="form-label"><b>Please choose the output numeration</b></label>
+        <select id="digitout" class="form-select">
+            <option value="10">--Please choose the output numeration--</option>
+            <option value="2">Binary</option>
+            <option value="3">Ternary</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16">Hex</option>
+            <option value="32">Duotricemary notation</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="num" class="form-label"><b>Please input a number</b></label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input type="text" id="num" class="form-control">
+        </div>
+    </div>
+</form>
+<br>
+<div style="justify-content: center; display: flex;">
+    <h2 id="result" style="font-weight: bold;">The result shows there </h2>
+</div> 
+
+<!--<div class="container">
+        <form id="number" style="padding-top: 70px" class="form-group">
+            <label>Please choose the input numeration</label>
+            <select id="digit">
+                <option value="0">--Please choose the input numeration--</option>
+                <option value="2">Binary</option>
+                <option value="3">Ternary</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hex</option>
+                <option value="32">Duotricemary notation</option>
+            </select>
+            <select id="digitout">
+                <option value="0">--Please choose the output numeration--</option>
+                <option value="2">Binary</option>
+                <option value="3">Ternary</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hex</option>
+                <option value="32">Duotricemary notation</option>
+            </select>
+        </form>
+        <label>Please input a number</label>
+        <input type="text" id="num">
+        <h1 id="result">Please choose a numeration first </h1>
+    </div>--> 
+
+{%endblock%} 

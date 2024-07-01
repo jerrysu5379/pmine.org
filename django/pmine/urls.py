@@ -35,6 +35,7 @@ urlpatterns = [
     path('bbcode/', include("bbcodetemp.urls")), 
     path('uuid/', include("uuidgen.urls")), 
     path('maths/', include("maths.urls")), 
+    path('viewmd/', include("viewmarkdown.urls")), 
 ] 
 
 localized_patterns = [
